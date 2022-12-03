@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Review de jogos Zezin</title>
+</head>
+
+<body>
+    <header class=" bg-black text-center">
+            <img class="navbar-brand" width="120" height="80" src="images/logo.png" alt="logo zezinho automoveis">
+    </header>
+    <main>
+        <h1 class="text-center mt-4 mb-5">Review de jogos Zezin</h1>
+        <div class="d-flex justify-content-evenly mb-5">
+            <div class="mt-4">
+                <h2 class="text-center">Mad-max</h2>
+                <img src="images/mad-max.jpg" alt="capa jogo mad max" class="mx-auto d-block" id="fotoJogo" width="400"
+                    height="400">
+            </div>
+            <div class="my-5">
+                <div class="p-1 text-black">
+                    <h3 class="text-black">Jogos disponiveis para review:</h4>
+                        <div>
+                            <select class="form-select form-select-lg" name="jogos" id="jogosDisp">
+                                <option selected value="Mad Max" >Mad max</option>
+                                <option value="Dark Souls">Dark Souls</option>
+                                <option value="Saints Row">Saints Row</option>
+                            </select>
+                        </div>                      
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around mb-5 ">
+            <div class="d-flex flex-column justify-content-evenly">
+                <div>
+                    <h5>Publicado por:</h5>
+                    <p id="publicado" >Warner Bros. Games</p>
+                </div>
+                <div>
+                    <h5>Desenvolvido por:</h5>
+                    <p id="desenvolvido">Avalanche Studios</p>
+                </div>
+                <div>
+                    <h5>Data de lançamento:</h5>
+                    <p id="data">31/08/2015</p>
+                </div>
+            </div>
+            <div class="mb-4 descricao" >
+                <h3 style="margin-bottom: 10px;">Descrição:</h3>
+                <p id="descricao">
+                    Torne-se Mad Max, um guerreiro solitário em um mundo selvagem pós-apocalíptico onde carros são a
+                    chave para a sobrevivência. Neste jogo de mundo aberto em terceira pessoa repleto de ação, você
+                    precisa lutar para sobreviver na Terra Desolada usando técnicas de combate a pé, ou no volante,
+                    contra gangues de bandidos ferozes. Um herói relutante com instinto de sobrevivência, não há
+                    nada
+                    que Max queira mais do que deixar a loucura para trás e encontrar um pouco de paz nas lendárias
+                    "Planícies do Silêncio". Os jogadores são desafiados com missões traiçoeiras à medida que
+                    saqueiam
+                    um mundo perigoso em busca de recursos para construir o veículo de combate definitivo.
+                </p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around">
+            <form class="text-black form-group" id="formReview">
+                <h3 class="text-primary">Dados para o review:</h3>
+                <div class="mb-2">
+                    <label for="apelido" class="form-label mb-2">Apelido:</label>
+                    <input type="text" class="form-control" name="apelido" id="apelido">
+                    <div>
+                        <p class="text-danger">*Por questões de segurança não use seu nome real</p>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="email" class="form-label mb-2">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email">
+                    <div>
+                        <p class="text-secondary">* Apenas para verificação, seu email não sera exposto</p>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="nota">Selecione a nota:</label>
+                    <div>
+                        <select class="form-select form-select-md" name="nota" id="nota">
+                            <option selected>Selecione sua nota</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="review" class="form-label mb-2">Seu review:</label>
+                    <textarea name="review" style="resize: none" class="form-control mb-2" id="review"
+                        rows="4"></textarea>
+                </div>
+                <button type="submit" id="subButton" class="btn btn-outline-success my-2">Enviar</button>
+            </form>
+            <div>
+                <div>
+                    <h4>Review de outros usuarios</h4>
+                </div>
+                <div class="mh overflow-scroll">
+                    <div id="listaReviews" class="list-group list-group-numbered">
+
+                    </div>
+                </div>
+                <div id="totalReviews">
+                    <h4>Total de reviews: 0</h4>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
